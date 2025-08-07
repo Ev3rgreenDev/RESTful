@@ -56,8 +56,15 @@ const produtoController = {
 
             res.json({ mensagem: 'Produto deletado com sucesso' })
         })
-    }
+    },
 
+    renderizarLista(req, res) {
+        produtoModel.listarTodos((err, produtos) => {
+            if (err) return res.status(500).send('Erro ao carregar a página.');
+
+            res.render('index', { produtos });
+        });
+    }
 }
 
 module.exports = produtoController

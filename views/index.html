@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div id="top-container" class="container-fluid">
+            <form id="search-form" class="form-inline" action="">
+                <div class="form-group col-md-10">
+                    <input type="text" class="form-control" id="busca" name="busca" placeholder="Insira a ID do produto">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary">Procurar</button>
+                </div>
+            </form>
+            <div class="content-container">
+                <button class="cta-btn" id="open">Adicionar</button>
+            </div>  
+        </div>  
+    </header>
+
+     <section class="modal-container" id="modal">
+        <section class="modal">
+            <button class="close-btn" id="close">x</button>
+            <div class="modal-content">
+                <h1>naosei</h1>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">Nome</label>
+                        <input 
+                        type="text" 
+                        id="name" 
+                        placeholder="Insira o nome" 
+                        class="form-input">
+                    </div>
+                    <div>
+                        <label for="descricao">Descrição</label>
+                        <input 
+                        type="text" 
+                        id="descricao" 
+                        placeholder="Insira a Descrição" 
+                        class="form-input">
+                    </div>
+                    <div>
+                        <label for="preco">Preço</label>
+                        <input 
+                        type="number" 
+                        step="0.01"
+                        id="preco" 
+                        placeholder="Insira o preço" 
+                        class="form-input">
+                    </div>
+                    <div>
+                        <label for="estoque">Estoque</label>
+                        <input 
+                        type="number" 
+                        id="estoque" 
+                        placeholder="Insira o estoque" 
+                        class="form-input">
+                    </div>
+                    <input type="submit" value="Criar" class="submit-btn">
+                </form>
+            </div>
+        </section>
+    </section>
+
+    <main>
+        <div id="produtos-container" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul id="produtos-list" class="list-group">
+                        <li class="list-group-item all-produtos">
+                            <h2>Nome</h2>
+                            <h2>Descrição</h2>
+                            <h2>Preço</h2>
+                            <h2>Estoque</h2>
+                            <h2>ID</h2>
+                            <a class="btn btn-deletar">Deletar</a>
+                            <a class="btn btn-editar">Editar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

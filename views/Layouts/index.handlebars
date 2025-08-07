@@ -1,0 +1,21 @@
+<main>
+    <div id="produtos-container" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul id="produtos-list" class="list-group">
+                    {{#each produtos}}
+                        <li class="list-group-item all-produtos">
+                            <h2>{{nome}}</h2>
+                            <h2>{{descricao}}</h2>
+                            <h2>{{preco}}</h2>
+                            <h2>{{estoque}}</h2>
+                            <h2>{{id}}</h2>
+                            <a class="btn btn-deletar">Deletar</a>
+                            <a class="btn btn-editar">Editar</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
